@@ -15,8 +15,31 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text("My Fisrt App"),
       ),
-      body: Container(
-        child: Center(child: Text("Hello")),
+      body: Center(
+        child: Container(
+          padding: const EdgeInsets.all(8),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey, blurRadius: 5, offset: Offset(2.0, 10.0))
+            ],
+            gradient: LinearGradient(colors: [
+              Colors.amber,
+              Colors.blue,
+            ]),
+          ),
+          width: 100,
+          height: 100,
+          child: Text(
+            "I am Box",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
       ),
     );
   }
